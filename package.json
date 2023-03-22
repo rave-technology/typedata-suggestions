@@ -1,6 +1,6 @@
 {
   "name": "typedata-suggestions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JavaScript-плагин для сервиса подсказок TypeData.net",
   "directories": {
     "src": "src",
@@ -13,6 +13,7 @@
       "url": "https://github.com/rave-technology/typedata-suggestions/blob/master/LICENSE"
     }
   ],
+  "repository": "https://github.com/rave-technology/typedata-suggestions",
   "homepage": "https://typedata.net/",
   "keywords": [
     "javscript",
