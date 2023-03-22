@@ -1,0 +1,138 @@
+.typedataSuggestions_wrapper {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.typedataSuggestions_wrapper > input {
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    text-overflow: ellipsis;
+    outline: none;
+    background-size: 1.4rem;
+    background-position: left 1.05rem top 0.8rem;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-color: #fff;
+    -webkit-transition: all -webkit-transform 0.4s ease;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    color: #000;
+    height: 42px;
+    padding: 0 15px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.typedataSuggestions_wrapper > input::placeholder {
+    color: #5d5d5d;
+    transition: all 0.3s ease;
+    -webkit-transition: all -webkit-transform 0.3s ease;
+}
+
+.typedataSuggestions_wrapper > input:hover::placeholder {
+    color: #5d5d5d;
+    transition: all 0.3s ease;
+    -webkit-transition: all -webkit-transform 0.3s ease;
+}
+
+.typedataSuggestions_wrapper > input:focus::placeholder {
+    padding: 0.1rem 0.6rem;
+}
+
+.typedataSuggestions_wrapper > input:focus::selection {
+    background-color: rgba(122, 140, 255, 0.15);
+}
+
+.typedataSuggestions_wrapper > input::selection {
+    background-color: rgba(122, 140, 255, 0.15);
+}
+
+.typedataSuggestions_wrapper > input:hover {
+    color: #000;
+    transition: all 0.3s ease;
+    -webkit-transition: all -webkit-transform 0.3s ease;
+}
+
+.typedataSuggestions_wrapper > input:focus {
+    color: #000;
+    border: 0.06rem solid #4d5fff;
+}
+
+.typedataSuggestions_wrapper > ul {
+    position: absolute;
+    max-height: 240px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+    z-index: 1;
+    list-style: none;
+    border-radius: 0.6rem;
+    background-color: #fff;
+    border: 1px solid rgba(33, 33, 33, 0.07);
+    box-shadow: 0 3px 6px rgba(149, 157, 165, 0.15);
+    outline: none;
+    transition: opacity 0.15s ease-in-out;
+    -moz-transition: opacity 0.15s ease-in-out;
+    -webkit-transition: opacity 0.15s ease-in-out;
+}
+
+.typedataSuggestions_wrapper > ul[hidden],
+.typedataSuggestions_wrapper > ul:empty {
+    display: block;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.typedataSuggestions_wrapper > ul > p{
+    padding: 7px 12px;
+    margin: 0;
+    color: #565656;
+}
+.typedataSuggestions_wrapper > ul > p > img{
+    float: right;
+    height: 15px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.typedataSuggestions_wrapper > ul > li {
+    margin: 0.3rem;
+    padding: 0.3rem 0.5rem;
+    text-align: left;
+    font-size: 1rem;
+    color: #212121;
+    border-radius: 0.35rem;
+    background-color: rgba(255, 255, 255, 1);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.2s ease;
+}
+
+.typedataSuggestions_wrapper > ul > li mark {
+    background-color: transparent;
+    color: #4d5fff;
+    font-weight: bold;
+}
+
+.typedataSuggestions_wrapper > ul > li:hover {
+    cursor: pointer;
+    background-color: #f2f2f2;
+}
+
+.typedataSuggestions_wrapper > ul > li[aria-selected="true"] {
+    background-color: #fff5e7;
+}
+
+@media only screen and (max-width: 600px) {
+    .typedataSuggestions_wrapper > input {
+        width: 18rem;
+    }
+}

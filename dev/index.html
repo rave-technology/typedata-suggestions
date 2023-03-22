@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../dist/typedata-suggestions.css">
+</head>
+
+<body>
+<div class="typedataSuggestions_wrapper">
+    <input id="typedataSuggestions" type="search" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off">
+</div>
+
+<script src="../dist/typedata-suggestions.js"></script>
+<script>
+    const typedataSuggestionsJS = new typedataSuggestions({
+        token: '9b8ba3e2-3f31-4c24-8231-2b4e4180b93f',
+        events: {
+            input: {
+                selection: (event) => {
+                    const selection = event.detail.selection.value;
+                    typedataSuggestionsJS.input.value = selection.value;
+                    alert(JSON.stringify(selection));
+                }
+            }
+        }
+    });
+</script>
+</body>
+
+</html>
